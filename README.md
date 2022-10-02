@@ -1,4 +1,9 @@
+# environment variables
+app.version
+app.break.exec.count.int
 
+ex) run locally
+mvnw compile quarkus:dev -Dapp.version=1.0.0 -Dapp.break.exec.count.int=5
 
 # ------------ OpenShift image build
 Add OpenShift Maven extension:
