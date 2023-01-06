@@ -30,6 +30,13 @@ public class GreetingResource {
             .entity("To get to the other side. (" + getIdentification() + ").").build();        
     }
 
+    @GET
+    @Produces(MediaType.TEXT_PLAIN)
+    @Path("health")
+    public String getHealth(){
+        return "ok - up and running";
+    }
+
     private boolean isMustBreak(){
         //use counter to determine when to 'break' (i.e. every 3 requests)
         if(GreetingResource.requestCounter == breakCounter){
